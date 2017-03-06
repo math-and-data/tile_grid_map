@@ -1,5 +1,4 @@
-# tile_grid_map
-Tile Grid Map of several countries
+# Tile Grid Map of several countries
 
 
 Inspired by https://www.r-bloggers.com/the-tile-grid-map-for-canada/ I went looking for maps and found  
@@ -11,9 +10,10 @@ Let's create some more maps.
 
 ```{r}
 # ==== EXAMPLES OF TILE GRID MAPS ====
+source('tile_grid_map.R')
 
 # put your data in here, 
-# use the 'province' field for matching regions
+# use the 'province' field for matching provinces in a country
 
 somedata_df <- tibble(
   province = c("Hesse", "Berlin", "Saarland", "Hamburg"), 
@@ -25,7 +25,9 @@ tile_map_of_germany <- plot_tile_grid_map(country_data=somedata_df,
                                           tile_grid_map=get_tile_grid_map("DACH"), 
                                           print_map=FALSE);
 tile_map_of_germany
-
+```
+![Tile Grid Map for Germany](https://github.com/math-and-data/tile_grid_map/blob/master/tile_grid_map_germany.png)
+```{r}
 somedata_df <- tibble(
   province = c("Vienna", "Salzburg", "Tyrol", "Vorarlberg", "Lower Austria", "Upper Austria", "Styria", "Carinthia"), 
   fun_activity = c("concerts", "concerts", "skiing", "skiing", NA, NA, NA, NA),
@@ -35,7 +37,9 @@ somedata_df <- tibble(
 plot_tile_grid_map(somedata_df, "Austria", "fun_activity")
 plot_tile_grid_map(somedata_df, "Austria", "population_over_500k")
 plot_tile_grid_map(somedata_df, "Austria", "population_over_1MM")
-
+```
+![Tile Grid Map for Austria](https://github.com/math-and-data/tile_grid_map/blob/master/tile_grid_map_austria.png)
+```{r}
 somedata_df <- tibble(
   province = c("Zürich", "Bern", "Vaud", "Aargau"), 
   population_over_500k = c(1463459, 1017483, 773407, 653675),
@@ -44,3 +48,5 @@ somedata_df <- tibble(
 plot_tile_grid_map(somedata_df, "Switzerland", "population_over_500k")
 plot_tile_grid_map(somedata_df, "Switzerland", "population_over_1MM")
 ```
+![Tile Grid Map for Switzerland](https://github.com/math-and-data/tile_grid_map/blob/master/tile_grid_map_switzerland.png)
+
