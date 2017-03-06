@@ -2,10 +2,10 @@
 Tile Grid Map of several countries
 
 
-Inspired by https://www.r-bloggers.com/the-tile-grid-map-for-canada/ I went looking for maps and found
-https://gist.github.com/dannydb/9e8ca69eba06b976da55 for US
-https://github.com/seankross/minimap for MX, CA, US
-https://github.com/kristw/d3kit-gridmap for US, Thailand
+Inspired by https://www.r-bloggers.com/the-tile-grid-map-for-canada/ I went looking for maps and found  
+https://gist.github.com/dannydb/9e8ca69eba06b976da55 for US  
+https://github.com/seankross/minimap for MX, CA, US  
+https://github.com/kristw/d3kit-gridmap for US, Thailand  
 
 Let's create some more maps.
 
